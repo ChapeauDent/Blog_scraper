@@ -4,6 +4,37 @@ import requests
 MODEL = "mistral"  # ou llama2, llama3, etc.
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
+# --- Détection automatique du type d'article ---
+def detecter_type_article(titre):
+    titre = titre.lower()
+    if any(mot in titre for mot in ["étapes", "comment", "tutoriel", "guide"]):
+        return "tutoriel"
+    if any(mot in titre for mot in ["vs", "comparatif", "lequel", "différences", "meilleur"]):
+        return "comparatif"
+    if any(mot in titre for mot in ["raisons", "outils", "conseils", "avantages", "chiffres", "liste"]):
+        return "liste"
+    if any(mot in titre for mot in ["selon nous", "notre avis", "nous pensons", "prise de position"]):
+        return "opinion"
+    if any(mot in titre for mot in ["conférence", "salon", "événement", "webinar", "séminaire"]):
+        return "événement"
+    return "liste"  # fallback
+
+# --- Modèles HubSpot associés ---
+MODELE_PAR_TYPE = {
+    "liste": "Modèle pour rédiger un article de type liste  - HubSpot.md",
+    "comparatif": "Modèle pour rédiger un article comparatif - HubSpot.md",
+    "tutoriel": "Modèle pour créer un article tutoriel - HubSpot.md",
+    "opinion": "Modèle pour créer un article de prise de position - HubSpot.md",
+    "événement": "Modèle pour créer un article de couverture d'évènement - HubSpot.md"
+}
+
+# --- Chargement CSV ---
+def load_csv(filepath):
+    with open(filepath, encoding="utf-8") as f:
+        reader = csv.DictReader(f, delimiter=";")
+        return [row for row in reader if row["title"] or row["description"]]
+
+# --- Communication avec Ollama ---
 def run_prompt(prompt):
     response = requests.post(OLLAMA_URL, json={
         "model": MODEL,
@@ -12,71 +43,37 @@ def run_prompt(prompt):
     })
     return response.json()["response"]
 
-def load_csv(filepath):
-    with open(filepath, encoding="utf-8") as f:
-        reader = csv.DictReader(f, delimiter=";")
-        return [row for row in reader if row["title"] or row["description"]]
+# --- Génération d'article ---
+def generer_article(depuis_title, sujet, description):
+    type_article = detecter_type_article(sujet)
+    modele_path = f"./{MODELE_PAR_TYPE[type_article]}"
+    with open(modele_path, encoding="utf-8") as f:
+        modele = f.read()
 
-def build_markdown_input(data):
-    markdown = ""
-    for row in data:
-        markdown += f"- {row['title'].strip()}\n  {row['description'].strip()}\n\n"
-    return markdown
+    prompt = f"""
+Tu es un rédacteur de blog professionnel.
 
-# === Chargement des données ===
-entries = load_csv("blog_data_clean.csv")
-content_markdown = build_markdown_input(entries)
+Sujet : {sujet}
 
-# === Prompt 1 : Filtrer les articles de blog ===
-prompt_filter = f"""
-Tu es un assistant spécialisé dans l’analyse de contenus web.
+Description : {description}
 
-Voici une liste de titres et descriptions de pages d’un site web. Sélectionne uniquement les éléments qui correspondent à des articles de blog.
+Utilise le modèle suivant pour structurer ton article :
 
-Ignore :
-- Accueil, contact, à propos
-- Produits ou services
-- Mentions légales, CGU
-- Catégories, filtres, navigation
+{modele}
 
-Formate la sortie en Markdown :
-### Titre de l’article
-*Description de l’article*
-
-Voici la liste :
-
-{content_markdown}
+Rédige un article complet, bien structuré, en français, au format Markdown.
 """
+    resultat = run_prompt(prompt)
+    nom_fichier = f"article_genere_{depuis_title}.md"
+    with open(nom_fichier, "w", encoding="utf-8") as f:
+        f.write(resultat)
+    print(f"✅ Article généré : {nom_fichier}")
 
-filtered_result = run_prompt(prompt_filter)
+# === MAIN ===
+data = load_csv("blog_data_clean.csv")
 
-with open("articles_filtrés.md", "w", encoding="utf-8") as f:
-    f.write(filtered_result)
-
-print("✅ Fichier articles_filtrés.md généré.")
-
-# === Prompt 2 : Générer des idées d’articles ===
-prompt_ideas = f"""
-Tu es un expert en rédaction de contenu pour blogs.
-
-Voici une liste de titres et descriptions d’articles existants :
-
-{content_markdown}
-
-Propose 10 nouvelles idées d’articles dans le même style (thématique, ton, audience).
-
-Pour chaque idée :
-- Un titre accrocheur
-- Une description d’1 à 2 phrases
-
-Formate en Markdown :
-### Titre proposé
-*Description de l’idée*
-"""
-
-ideas_result = run_prompt(prompt_ideas)
-
-with open("nouvelles_idees_articles.md", "w", encoding="utf-8") as f:
-    f.write(ideas_result)
-
-print("✅ Fichier nouvelles_idees_articles.md généré.")
+# Générer un article pour chaque entrée ayant une description
+for i, row in enumerate(data):
+    if row["description"].strip():
+        titre = row["title"].strip() or f"sujet_{i}"
+        generer_article(depuis_title=f"{i:02d}", sujet=titre, description=row["description"].strip())

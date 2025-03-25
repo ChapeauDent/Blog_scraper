@@ -1,0 +1,242 @@
+# 
+
+# Modèle pour utiliser une liste dans un article {#modèle-pour-utiliser-une-liste-dans-un-article}
+
+Un article de blog d’entreprise optimisé pour le lecteur est en mesure de présenter les différentes informations de manière claire et lisible. Cet aspect fait notamment partie des critères E.E.A.T. (Expérience, Expertise, Autorité et Confiance) que les moteurs de recherche utilisent pour classer les pages des sites internet. Pour ce faire, il convient d’utiliser quelques techniques simples pour aérer le contenu et faciliter sa lecture. L’une d’entre elles consiste à utiliser des listes à puce dans le corps du texte. En plus de clarifier les informations et de rendre plus dynamique la lecture, la liste à puce optimise le temps passé au moment de l’écriture. Voici quelques exemples de listes à utiliser dans un article ainsi que des modèles pour faciliter la création de ce type de contenu au quotidien. 
+
+| Astuces |  |
+| ----- | ----- |
+| **EEAT** | **Conversion** |
+| Pour répondre aux exigences “*honest review*” de Google, il faut indiquer dans l’article les critères de sélection des éléments de la liste (ex : “nous avons sélectionné les 10 outils les plus vendus en France, classés en fonction des notes utilisateurs”). Dans le cas d’une liste d’évaluation, il faudra aussi indiquer les points forts et les points faibles, car les revues trop biaisées seront pénalisées. | Faire figurer votre produit arbitrairement en premier dans une liste peut être contre-productif, car jugé trop promotionnel par Google et par les visiteurs. Si une autre solution domine le marché, mentionnez-là en premier, puis détaillez pourquoi votre produit est particulièrement adapté à un scénario ou à un groupe d’utilisateurs particulier. |
+
+[Modèle pour utiliser une liste dans un article](#modèle-pour-utiliser-une-liste-dans-un-article)
+
+[Les différents modèles de listes](#les-différents-modèles-de-listes)
+
+[1\. Liste à puces](#liste-à-puces)
+
+[2\. Liste ordonnée](#liste-ordonnée)
+
+[Modèle d’article de listes](#modèle-d’article-de-listes)
+
+[1\. L’article-liste](#l’article-liste)
+
+[2\. L’article-liste développé](#l’article-liste-développé)
+
+[3\. L’article avec liste intégrée](#l’article-avec-liste-intégrée)
+
+[Conseils complémentaires](#conseils-complémentaires)
+
+## 
+
+## Les différents modèles de listes {#les-différents-modèles-de-listes}
+
+1. ### Liste à puces {#liste-à-puces}
+
+Comme l’indique le nom de cette liste, chacun des items (lignes) est doté d’une puce. Celle-ci est toujours précédée d’une phrase introductive qui peut se terminer par un point simple (fermée) ou par un double point (ouverte).
+
+Dans le premier cas de figure, chaque occurrence est considérée comme une phrase à part entière.
+
+* Elle commence par une majuscule.  
+* Elle s’achève par un point. 
+
+Dans le cas où la liste débute par une phrase ouverte, elle est rédigée de la manière suivante :
+
+* pas de majuscule ;  
+* un point-virgule ou une virgule à la fin des items s’ils sont longs ;   
+* pas de ponctuation s’ils sont courts (un seul mot) ;  
+* un point à la fin du dernier item puisqu’il clôture la phrase.
+
+En langage HTML, la balise correspondante est \<ul\> pour *unordered list*. Aussi, si l’on souhaite passer de l’éditeur texte, on l’insère comme suit :
+
+*\<ul\>*
+
+*\<li\> item 1 \</li\>*
+
+*\<li\> item 2 \</li\>*
+
+*\<li\> item 3 \</li\>*
+
+*\</ul\>*
+
+2. ### Liste ordonnée {#liste-ordonnée}
+
+Ce type de liste désigne en fait une liste numérotée. Les numéros indiquent une progression, comme dans un tutoriel. Les règles de ponctuation restent les mêmes que pour la liste à puces, tout comme celles en lien avec l’utilisation d’une phrase préalable.
+
+Pour rédiger une énumération, voici quelques conseils élémentaires à suivre :
+
+* découper le sujet en plusieurs étapes distinctes ;  
+* trouver un titre pour chacune d’entre elles ;  
+* respecter la logique de progression de la tâche ;  
+* être clair et précis.
+
+En langage HTML, la balise correspondante est \<ol\> pour ordered list. Elle se code comme suit :
+
+*\<ol\>*
+
+*\<li\> item 1 \</li\>*
+
+*\<li\> item 2 \</li\>*
+
+*\<li\> item 3 \</li\>*
+
+*\</ol\>*
+
+# Modèle d’article de listes {#modèle-d’article-de-listes}
+
+Les listes peuvent être intégrées de plusieurs façons à un article de blog. Voici donc trois modèles d’articles correspondants.
+
+* L’article-liste.  
+* L’article-liste développé.  
+* L’article avec liste intégrée.
+
+1. ## L’article-liste {#l’article-liste}
+
+Ce type d’article n’intègre pas de liste, il “est” la liste. Hormis le paragraphe d’introduction, il ne nécessite, de ce fait, que très peu de rédaction.
+
+**\[Titre : mentionner le ou les objets de la liste. Celui-ci peut également annoncer le nombre de lignes que l’on peut ensuite retrouver dans l’article. À noter que, dans ce cas, la liste ordonnée s’impose.\]**
+
+*\[Exemple\] Les 12 commandements de l’article de blog performant*
+
+**\[Introduction : longue d’un ou deux paragraphes, elle contextualise le sujet et explique l’intérêt des conseils qui seront développés pour le lecteur.\]**
+
+*\[Exemple\] Proposer des articles agréables à lire et stimulants, utiles à ses lecteurs et bien référencés est primordial pour la vie d’un blog et sa capacité à susciter l’engagement. Cet exercice doit être envisagé comme un réel service que l’on apporte en plus à son client potentiel.* 
+
+*Il est important de parfaitement comprendre les enjeux de la cible et de maîtriser certains standards rédactionnels. Les 12 commandements de la rédaction constituent une base solide pour débuter dans la discipline.*
+
+**\[Corps de texte : se découpe en plusieurs sections, chacune constituant une liste\]**
+
+**\[Titre section 1\]**
+
+*\[Exemple\] Le fond*
+
+1. *S’interroger sur les attentes des clients.*  
+2. *Trouver un sujet ou un angle original.*  
+3. *S’inspirer d’expériences réelles.*  
+4. *Vérifier la fiabilité des informations.*
+
+**\[Titre section 2\]**
+
+*\[Exemple\] La forme*
+
+1. *Utiliser un vocabulaire adapté et professionnel.*  
+2. *Rédiger un article aéré et structuré.*  
+3. *Intégrer des photos ou illustrations.*  
+4. *Trouver un titre attrayant.*
+
+**\[Titre section 3\]**
+
+*\[Exemple\] La valorisation du contenu*
+
+1. Estimer la longueur reconnue par les algorithmes à utiliser.  
+2. Placer des mots-clés pertinents.  
+3. Soigner les métadonnées.  
+4. Promouvoir la publication sur les réseaux sociaux.
+
+2. ## L’article-liste développé {#l’article-liste-développé}
+
+Ce type d’article reprend aussi la structure globale d’une liste, mais contrairement au précédent, les paragraphes sont rédigés. Ici, les items correspondent aux titres de chaque section.
+
+**\[Titre : mentionner le ou les objets de la liste. Il peut également annoncer le nombre de lignes que l’on peut ensuite retrouver dans l’article. À noter que, dans ce cas, la liste ordonnée s’impose.\]**
+
+*\[Exemple\] Comment rédiger un article de blog performant*
+
+**\[Introduction : longue d’un ou deux paragraphes, elle contextualise le sujet et explique l’intérêt des conseils qui seront développés pour le lecteur.\]**
+
+*\[Exemple\] Proposer des articles agréables à lire et stimulants, utiles à ses lecteurs et bien référencés est primordial pour la vie d’un blog et sa capacité à susciter l’engagement. Cet exercice doit être envisagé comme un réel service que l’on apporte en plus à son client potentiel.* 
+
+*Les trois conseils développés ci-dessous constituent une base solide pour débuter dans la discipline.*
+
+**\[Menu facultatif : à la manière d’un sommaire, reprendre les titres des sections sous forme de liste numérotée\]**
+
+*\[Exemple\] Voir sommaire de la section “Modèles d’articles de listes”*
+
+**\[Corps de texte : se découpe en plusieurs sections, dont le titre constitue un item.\]**
+
+**\[Titre section\]**
+
+*\[Exemple\] Rédiger un article vraiment intéressant*
+
+**\[Texte : développer l’idée directrice et les conseils sous forme d’un paragraphe\]**
+
+*\[Exemple\] Le copié-collé, les textes bâclés, trop publicitaires n’ont pas leur place dans ce type de démarches si l’objectif est d’en retirer un bénéfice.* 
+
+*Il faut donc rédiger des articles vraiment intéressants et utiles.*
+
+*Cela commence par le choix du sujet ou de l’angle. Il est plus facile de les déterminer si l’on connaît les enjeux de sa cible. Interroger les équipes commerciales ou des clients actuels en personne sont des solutions efficaces pour définir des sujets “parlants”. Faire intervenir des experts dans un domaine également.*
+
+*Enfin, point extrêmement important : la fiabilité de l’information délivrée. Pour que le lecteur se change en acheteur, il doit pouvoir faire confiance à ce qu’il lit, car bien souvent il recherche une solution à un problème ou une aide à la décision.*
+
+**\[Titre section\]**
+
+*\[Exemple\] Soigner la forme pour donner envie de lire*
+
+**\[Texte\]**
+
+**\[Titre section\]**
+
+*\[Exemple\] Rendre visibles son contenu et son blog*
+
+**\[Texte\]**
+
+3. ## L’article avec liste intégrée {#l’article-avec-liste-intégrée}
+
+Il s’agit du plus classique des types d’articles de liste. Il est construit comme un article classique avec des sous-titres et des paragraphes. Sa différence réside dans le fait qu’entre certains s’intercale une liste, afin de faciliter la lecture.
+
+**\[Titre\]**
+
+*\[Exemple\] Comment rédiger un article de blog performant*
+
+**\[Introduction\]**
+
+*\[Exemple\] Proposer des articles agréables à lire et stimulants, utiles à ses lecteurs et bien référencés est primordial pour la vie d’un blog et sa capacité à susciter l’engagement. Cet exercice doit être envisagé comme un réel service que l’on apporte en plus à son client potentiel.* 
+
+*Les conseils développés ci-dessous constituent une base solide pour débuter dans la discipline.*
+
+**\[Corps de texte\]**
+
+**\[Sous-titre section 1\]**
+
+*\[Exemple\] Soigner le fond*
+
+**\[Texte : développer l’idée directrice et les conseils sous forme d’un paragraphe\]**
+
+*\[Exemple\] Le copié-collé, les textes bâclés, trop publicitaires n’ont pas leur place dans ce type de démarches si l’objectif est d’en retirer un bénéfice. Afin de rédiger des articles vraiment intéressants et utiles, il est nécessaire de s’assurer de :*
+
+* *choisir correctement son sujet,*  
+* *solliciter les bons intervenants, les bonnes sources,*  
+* *délivrer une information fiable.*
+
+*Ce dernier point est crucial : un lecteur qui fait confiance à l’expertise d’une entreprise sur tel ou tel sujet présente de plus fortes chances d’en devenir le client.*
+
+*Une fois ces aspects validés, il est temps de passer à la rédaction et à la mise en forme. Là aussi, certains standards demandent à être respectés.*
+
+**\[Sous-titre section 2\]**
+
+**\[Texte\]**
+
+**\[Sous-titre section 3\]**
+
+**\[Texte\]**
+
+## Conseils complémentaires {#conseils-complémentaires}
+
+Excepté dans le cadre de la création d’un article-liste en tant que tel, il est important de ne pas surcharger l’article et d’espacer les listes, afin de conserver l’effet de rythme qu’elles sont censées avoir sur le lecteur.
+
+Harmoniser la liste en ne recourant qu’à une seule catégorie grammaticale par liste reste un choix judicieux. Si, par exemple, il est prévu d’énumérer une succession d’actions dans l’article, il convient d’utiliser des verbes à l’infinitif et de respecter ce choix du début à la fin de la liste.
+
+Il est également primordial de limiter les occurrences à rallonge et de calibrer la liste. Dans l’idéal, celle-ci en comptera entre trois et six.
+
+Plutôt que de répéter la même action/terme au début de chaque ligne de la liste, il est préférable de l’inclure dans la phrase d’introduction.
+
+Pour assurer une mise en page optimale, utiliser l’outil de mise en page automatique de liste de HubSpot et éviter d’avoir recours à des tirets. En effet, ceux-ci ne sont pas reconnus par les normes SEO et sont parfois responsables de quelques déconvenues à l’affichage.
+
+Pour suivre les publications des contenus sur le blog d’entreprise au fil du temps, utiliser un [modèle de planning éditorial](https://docs.google.com/spreadsheets/d/1Gv8dyH0-LbGvfegmQ4HAhod-ab9c3EtbYHGFq2mV3ps/edit#gid=0).
+
+# 
+
+# 
+
+[![][image1]](https://www.hubspot.fr/products/get-started?hubs_offer-cta=fr-pdf)
+
+[image1]: <data:image/png;base64,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>
